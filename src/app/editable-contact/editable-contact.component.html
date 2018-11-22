@@ -1,0 +1,5 @@
+<td *ngIf="! editing">{{contact.name}}</td>
+<td *ngIf="! editing">{{contact.phone}}</td>
+<td *ngIf="editing"><input class="form-control" [(ngModel)] = "contact.name"/></td>
+<td *ngIf="editing"><input class="form-control" [(ngModel)] = "contact.phone"/></td>
+<td><button class="btn" (click)="onEdit()">{{editing ? 'Save' : 'Edit'}}</button></td>
